@@ -58,11 +58,9 @@ jobs:
           to: ${{ secrets.TG_DEPLOY_GROUP_ID }}
           token: ${{ secrets.TG_DEPLOY_BOT_TOKEN }}
           message: |
-            ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
-
-            Repository: ${{ github.repository }}
-
+           🟢 Changes from by ${{ github.actor }} from commit: ${{ github.event.commits[0].message }}
+            repository: ${{ github.repository }}
+            has been deployed on https://zomurrod.com
             See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
 
   check-failure:
@@ -73,12 +71,10 @@ jobs:
       - name: send telegram message on failure
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+          to: ${{ secrets.TG_DEPLOY_GROUP_ID }}
+          token: ${{ secrets.TG_DEPLOY_BOT_TOKEN }}
           message: |
-            ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
-
-            Repository: ${{ github.repository }}
-
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            ❌ Failed to deploy changes from ${{ github.actor }} from commit: ${{ github.event.commits[0].message }}
+            on Repository: ${{ github.repository }}
+            see changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            failed run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
