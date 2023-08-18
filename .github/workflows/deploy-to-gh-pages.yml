@@ -46,3 +46,39 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+  check-success:
+    runs-on: ubuntu-latest
+    needs: [ build, deploy ]
+    if: ${{ !failure() && !cancelled() }}
+    steps:
+      - name: send telegram message on success
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TG_DEPLOY_GROUP_ID }}
+          token: ${{ secrets.TG_DEPLOY_BOT_TOKEN }}
+          message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
+  check-failure:
+    runs-on: ubuntu-latest
+    needs: [ build, deploy ]
+    if: ${{ failure() }}
+    steps:
+      - name: send telegram message on failure
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
