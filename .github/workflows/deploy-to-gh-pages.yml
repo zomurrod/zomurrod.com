@@ -44,7 +44,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: test
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
   check-success:
@@ -60,7 +60,8 @@ jobs:
           message: |
            🟢 Changes from by ${{ github.actor }} from commit: ${{ github.event.commits[0].message }}
             repository: ${{ github.repository }}
-            has been deployed on https://zomurrod.com
+            has been deployed successfully on https://zomurrod.com
+
             See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
 
   check-failure:
@@ -76,5 +77,7 @@ jobs:
           message: |
             ❌ Failed to deploy changes from ${{ github.actor }} from commit: ${{ github.event.commits[0].message }}
             on Repository: ${{ github.repository }}
+
             see changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
             failed run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
