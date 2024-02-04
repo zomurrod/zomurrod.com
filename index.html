@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html dir="rtl" lang="ar">
 
 <head>
   <title>زُمرد</title>
@@ -15,7 +15,7 @@
   <meta charset="UTF-8" />
   <meta property="og:title" content="Zomurrod"/>
   <meta property="og:image" content="https://zomurrod.com/thumbnail.png"/>
-  <meta property="og:description" content="We are your partners in redefining the digital landscape, specializing in crafting solutions that break molds and exceed expectations. Elevate your online presence with us and embrace a journey of unparalleled digital growth"/>
+  <meta property="og:description" content="We are your partners in redefining the digital landscape, specializing in crafting solutions that break molds and exceed expectations. Elevate your online presence with us and embrace a journey of unparalleled digital growth."/>
   <meta property="og:url" content="www.zomurrod.com"/>
   <meta name="author" content="Zomurrod">
   <meta property="og:image:width" content="1200" />
@@ -23,22 +23,61 @@
   <!-- <link rel="stylesheet" href="/style.css"> -->
 </head>
 
-<body class="bg-[url('/Union.svg')] bg-no-repeat bg-center bg-cover font-['Alexandria']">
-  <main id="app">
-    <div class="container m-auto flex flex-col items-center justify-between max-w-3xl h-screen">
-      <nav class="flex justify-center mt-12">
-        <div>
-          <a href="#"><img src="/Logo.svg" alt="logo"></a>
+<body class="bg-[url('/Union.svg')] bg-no-repeat bg-center bg-cover bg-[#F5FCF8] font-['Alexandria'] flex flex-col h-screen px-4 m-auto text-lg leading-7 max-w-5xl sm:px-24 md:px-32 lg:px-32 xl:px-25">
+  <div class="flex justify-center mt-12">
+      <a href="#"><img src="/Logo.svg" alt="logo"></a>
+  </div>
+
+    <main class="flex justify-center flex-col items-center mx-auto max-w-8xl text-center gap-12 mt-[138px]">
+      <div class="flex justify-center flex-col items-center max-w-xl text-center gap-4">
+        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="py-1 pl-1 pr-2 bg-white rounded-[13px] drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline outline-black/5 justify-center items-center gap-1 inline-flex">
+          <div class="text-center text-neutral-600 text-[10px] font-normal font-['Alexandria'] leading-4">اقتـرح معنى</div>
+          <div>
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.95353 4.16112C9.1545 4.37012 9.14798 4.70247 8.93898 4.90344L6.18255 7.5L8.93898 10.0966C9.14798 10.2975 9.1545 10.6299 8.95353 10.8389C8.75257 11.0479 8.42022 11.0544 8.21121 10.8534L5.06121 7.87844C4.95827 7.77946 4.9001 7.64281 4.9001 7.5C4.9001 7.35719 4.95827 7.22055 5.06121 7.12156L8.21122 4.14656C8.42022 3.9456 8.75257 3.95211 8.95353 4.16112Z" fill="#828282"/>
+              </svg>                                         
+          </div>
+        </button>
+        <h1 class="break-all font-semibold text-2xl text-zinc-700 leading-[38px] sm:text-4xl sm:leading-[58px]">
+          زمرد، قاموس تجربة المستخدم</h1>
+          <p class="w-[551px] text-center text-zinc-500 text-base font-normal font-['Alexandria']">دليلك المبسط لكل المفاهيم والمصطلحات المتعلقة بتجربة المستخدم</p>
+      </div>
+      <form class="">
+        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">بحث</label>
+        <div class="w-[573px] h-[68px] p-2.5 bg-white bg-opacity-25 rounded-[18px] backdrop-blur-sm flex-col justify-end items-end inline-flex relative">
+            <input type="text" name="search" id="search" placeholder="أدخل كلمة او جملة للبحث..." class="rtl:text-right self-stretch text-sm h-12 text-right px-11 py-5 bg-white rounded-[10px] drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline-offset-0 outline outline-black/5 justify-end items-center inline-flex">
+            <div class="absolute inset-y-0 right-6 flex items-center pointer-events-none">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 19L13.8033 13.8033M13.8033 13.8033C15.1605 12.4461 16 10.5711 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16C10.5711 16 12.4461 15.1605 13.8033 13.8033Z" stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>       
         </div>
-      </nav>
-      <section class="flex justify-center flex-col items-center max-w-xl text-center gap-2">
-        <span class="text-sm text-gray-500">مرحبا</span>
-        <p class="break-all font-semibold text-2xl text-gray-800 leading-[38px] sm:text-4xl sm:leading-[58px]">نحن
-          نُشعــل
-          الأبــداع<br>
-          ونبني فقط ماهو غيـــــر إعتيادي</p>
-      </section>
-      <footer class="flex flex-col items-center w-full gap-7 mb-12">
+      </form>
+
+      <section class="w-[573px] h-[520px] p-6 bg-white rounded-xl flex-col justify-center items-start gap-8 inline-flex drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)]">
+        <div class="px-4 py-2 bg-emerald-50 rounded-2xl justify-center items-start gap-2.5 inline-flex">
+            <div class="text-center text-black text-xs font-normal font-['Alexandria']">الكلمات الأكثر بحثاً</div>
+        </div>
+        
+        <div class="self-stretch h-[157px] flex-col justify-start items-start gap-5 flex">
+            <div class="text-right text-zinc-800 text-sm font-semibold font-['Alexandria']">نمط واجهة المستخدم (UI Pattern)</div>
+            <p class="self-stretch text-right text-zinc-700 text-xs font-normal font-['Alexandria'] leading-6">أنماط واجهة المستخدم هي حلول قابلة لإعادة الاستخدام لمشاكل الاستخدام الشائعة في المنتجات، أو على الويب معبراً عنها كمجموعة من عناصر واجهة المستخدم. فكر في شاشة تسجيل الدخول. يتكون نمط واجهة المستخدم الشائعة لتسجيل الدخول من حقلي إدخال، أحدهما لاسم المستخدم والآخر لكلمة المرور، وزر لإرسالهما. نسمي هذه المجموعة من العناصر نمط تسجيل الدخول.</p>
+        </div>
+        <div class="self-stretch h-[85px] flex-col justify-start items-start gap-5 flex">
+            <div class="text-right text-zinc-800 text-sm font-semibold font-['Alexandria']">قابلية الاستخدام</div>
+            <p class="self-stretch text-right text-zinc-700 text-xs font-normal font-['Alexandria'] leading-6">اختبار قابلية الاستخدام هو طريقة بحث تتيح لنا تقييم مدى سهولة استخدام المنتج عن طريق اختباره على مجموعة من المستخدمين التمثيليين.</p>
+        </div>
+        <div class="self-stretch h-[85px] flex-col justify-start items-start gap-5 flex">
+            <div class="text-right text-zinc-800 text-sm font-semibold font-['Alexandria']">قابلية الاستخدام</div>
+            <p class="self-stretch text-right text-zinc-700 text-xs font-normal font-['Alexandria'] leading-6">اختبار قابلية الاستخدام هو طريقة بحث تتيح لنا تقييم مدى سهولة استخدام المنتج عن طريق اختباره على مجموعة من المستخدمين التمثيليين.</p>
+        </div>
+    </section>
+
+    </main>
+
+  
+
+      <footer class="flex flex-col items-center w-full gap-7 my-12 py-12">
         <div class="flex flex-wrap gap-12">
           <a href="#" target="_blank" class="text-gray-600">
             <span>
@@ -70,8 +109,6 @@
         </div>
         <p class="text-sm text-gray-300">© 2023</p>
       </footer>
-    </div>
-  </main>
   <script type="module" src="/src/main.ts"></script>
 </body>
 
