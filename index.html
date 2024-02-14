@@ -28,10 +28,10 @@
   <main id="app" class="bg-[url('/Union.svg')]  bg-no-repeat bg-center bg-cover">
     <div class="container m-auto flex flex-col items-center justify-between   gap-[42px]">
       <nav class="flex flex-col justify-center  items-center gap-[9px]  mt-12">
-        <div >
+        <div>
           <a href="#"><img src="/Logo.svg" alt="logo"></a>
-      </div>
-    </nav>  
+        </div>
+      </nav>
       <!--  start loading section -->
       <!-- <section class="flex justify-center flex-col items-center max-w-xl text-center gap-2">
         <span class="text-sm text-gray-500">مرحبا</span>
@@ -45,52 +45,44 @@
 
       <section class="flex justify-center flex-col items-center max-w-xl text-center gap-2 max-w-[589px] px-4 w-full">
         <!-- <span class="text-sm text-gray-500">مرحبا</span> -->
-       <div class="my-[26px]">
-        <button id="open" class="inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-[10px] font-medium text-zinc-500 border  border-black/[.05]  shadow-2sm  my-2 cursor-pointer
-        leading-[15px]">
-          اقتـرح معنى
-          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M8.95353 4.16112C9.1545 4.37012 9.14798 4.70247 8.93898 4.90344L6.18255 7.5L8.93898 10.0966C9.14798 10.2975 9.1545 10.6299 8.95353 10.8389C8.75257 11.0479 8.42022 11.0544 8.21121 10.8534L5.06121 7.87844C4.95827 7.77946 4.9001 7.64281 4.9001 7.5C4.9001 7.35719 4.95827 7.22055 5.06121 7.12156L8.21122 4.14656C8.42022 3.9456 8.75257 3.95211 8.95353 4.16112Z"
-              fill="#A1A1AA" />
-          </svg>
+        <div class="my-[26px] flex  flex-col  gap-[16px]">
+          <div>
+            <button id="open" class=" gap-[4px] inline-flex items-center rounded-full bg-zinc-50 pr-[9px] py-[5px] pl-[5px] text-[10px]  text-zinc-700 border  border-black/[.05]  shadow-2sm  
+          leading-[15px]">
+              <span>اقتـرح معنى</span>
+              <img src="/arrow-icon.svg" />
 
-        </button>
+            </button>
+          </div>
 
-        <p class="break-all font-semibold text-2xl text-zinc-700 leading-[38px] sm:text-4xl sm:leading-[58px]">
-          زمرد، قاموس تجربة المستخدم</p>
-        <span class="text-sm text-zinc-500 ">دليلك المبسط لكل المفاهيم والمصطلحات المتعلقة بتجربة المستخدم</span>
+          <p class="break-all font-semibold text-2xl text-zinc-700 leading-[38px] sm:text-4xl sm:leading-[44px]">
+            زمرد، قاموس تجربة المستخدم</p>
+          <span class="  text-zinc-500   ">دليلك المبسط لكل المفاهيم والمصطلحات المتعلقة بتجربة المستخدم</span>
 
-       </div>
+        </div>
 
-        <div class="w-full mt-2 bg-white/[.25] py-4 px-4  rounded-[10px] ">
+        <div class="w-full mt-2 bg-white/[.25] p-[10px] rounded-[20px] " style="backdrop-filter: blur(2px);">
           <div class="relative">
             <input type="text" name="search" id="search"
-              class="block w-full rounded-[10px] bg-white  border  border-black/[.05]  shadow-1sm  h-[48px]   px-12 text-gray-900  placeholder:text-gray-400      focus:border focus:border-primary"
+              class="block w-full rounded-[10px] bg-white  drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline-offset-0 outline outline-black/5 shadow-1sm  h-[48px]   px-12 text-gray-900  placeholder:text-gray-400  focus:outline-1  focus:outline-offset-0    focus:outline focus:outline-primary"
               placeholder="أدخل كلمة او جملة للبحث...">
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4">
               <span class="text-gray-500 sm:text-sm">
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M21.5 21L16.3033 15.8033M16.3033 15.8033C17.6605 14.4461 18.5 12.5711 18.5 10.5C18.5 6.35786 15.1421 3 11 3C6.85786 3 3.5 6.35786 3.5 10.5C3.5 14.6421 6.85786 18 11 18C13.0711 18 14.9461 17.1605 16.3033 15.8033Z"
-                    stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                <img src="/search-icon.svg" />
 
               </span>
             </div>
-            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+            <button id="input-clear" class="  absolute hidden inset-y-0 left-0 flex items-center pl-4">
               <span class="text-gray-500 sm:text-sm">
                 <div class="cursor-pointer">
-                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 18.5L18 6.5M6 6.5L18 18.5" stroke="#71717A" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
+                  <img src="/close-icon.svg" />
+
                 </div>
               </span>
-            </div>
+            </button>
 
             <ul
-              class="absolute z-10 mt-2 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-4sm border border-black/[0.05]   focus:outline-none   hidden"
+              class="absolute z-10 mt-2 max-h-56 w-full overflow-auto rounded-[10px] bg-white py-1 text-base shadow-4sm border border-black/[0.05]   focus:outline-none   hidden"
               id="autocomplete-results" tabindex="-1" role="listbox" aria-labelledby="listbox-label"
               aria-activedescendant="listbox-option-3">
               <!--
@@ -98,24 +90,25 @@
         
                 Highlighted: "bg-indigo-600 text-white", Not Highlighted: "text-gray-900"
               -->
-              <li class="text-[12px] text-start text-[#828282] relative cursor-default select-none py-4 px-6" id="listbox-option-0"
-                role="option">
-               
+              <li class="text-[12px] text-start text-[#828282] relative cursor-default select-none py-4 px-6"
+                id="listbox-option-0" role="option">
+
                 تصميم واجهات
 
-                
+
               </li>
 
               <!-- More items... -->
             </ul>
           </div>
         </div>
-        <div id="alpha-filter" class="w-full mt-2 bg-white/[.25] py-[10px] px-[10px]  rounded-[10px] flex gap-[10px] overflow-auto">
+        <div id="alpha-filter" style="backdrop-filter: blur(2px);"  
+          class="w-full mt-2 bg-white/[.25] p-[10px] rounded-[16px] flex gap-[10px] overflow-auto">
           <!-- <button
             class="block min-w-[45px] w-[45px] rounded-[10px]   shadow-1sm  h-[30px]  px-1 py-1   text-[12px] text-zinc-600  bg-white text-zinc-50 bg-primary ">
           
           </button> -->
-         
+
 
         </div>
       </section>
@@ -131,7 +124,7 @@
           <div>
             <!-- end no data found  -->
 
-            <span class="inline-flex items-center rounded-full bg-primary-light px-4 py-2   text-[14px] font-medium text-zinc-600   shadow-2sm  my-2
+            <span class="inline-flex items-center rounded-full bg-primary-light px-4 py-2   text-[14px]  text-zinc-600   shadow-2sm  my-2
           leading-[17px]">
               حرف أ
 
@@ -156,18 +149,23 @@
         </div>
       </section>
       <footer class="flex flex-col justify-between w-full gap-7 mb-12  max-w-[589px] px-4">
+        <svg width="537" height="2" viewBox="0 0 537 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1H536" stroke="black" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="6 6" />
+        </svg>
+
         <div class="flex flex-wrap gap-12">
           <div class="flex-1 ">
             <div class="mb-4">
               <a href="#"><img src="/Logo2.svg" alt="logo"></a>
             </div>
-            <p class="mb-1 text-zinc-500 text-[10px] leading-[20px] font-medium">زمرد عبارة عن مبادرة تسعى إلى إحداث أثر كبير في عالم تجربة المستخدم عبر اثراء المعرفة وإتاحتها للناطقين باللغة العربية.</p>
+            <p class="mb-1 text-zinc-500 text-[10px] leading-[20px] font-medium">زمرد عبارة عن مبادرة تسعى إلى إحداث أثر
+              كبير في عالم تجربة المستخدم عبر اثراء المعرفة وإتاحتها للناطقين باللغة العربية.</p>
           </div>
           <div class="flex flex-col gap-1">
             <span class="mb-1 text-zinc-500 text-[10px] leading-[20px] font-medium">صُناع زُمرّد</span>
-            <a href=""  class="text-zinc-500 text-[10px] leading-[20px]">دنيا المسمري</a>
-            <a href=""  class="text-zinc-500 text-[10px] leading-[20px]">زرياب نبيل</a>
-            <a href=""  class="text-zinc-500 text-[10px] leading-[20px]">أيمن محي</a>
+            <a href="" class="text-zinc-500 text-[10px] leading-[20px]">دنيا المسمري</a>
+            <a href="" class="text-zinc-500 text-[10px] leading-[20px]">زرياب نبيل</a>
+            <a href="" class="text-zinc-500 text-[10px] leading-[20px]">أيمن محي</a>
           </div>
         </div>
       </footer>
@@ -175,8 +173,7 @@
 
 
     <!-- create dialog -->
-    <div id="dialog" class="relative z-10  hidden  " aria-labelledby="modal-title"
-      role="dialog" aria-modal="false">
+    <div id="dialog" class="relative z-10  hidden  " aria-labelledby="modal-title" role="dialog" aria-modal="false">
       <!--
     Background backdrop, show/hide based on modal state.
   
@@ -187,7 +184,7 @@
       From: "opacity-100"
       To: "opacity-0"
   -->
-  
+
       <div id="dialog-backdrop" class="fixed inset-0 bg-white bg-opacity-50 transition-opacity " style="
   backdrop-filter: blur(20.5px);"></div>
 
@@ -203,8 +200,7 @@
           From: "opacity-100 translate-y-0 sm:scale-100"
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       -->
-          <div
-          id="dialog-content"
+          <div id="dialog-content"
             class="relative transform overflow-hidden rounded-lg bg-white  shadow-2sm transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div class="bg-white  flex flex-col gap-[24px]  p-[32px] ">
 

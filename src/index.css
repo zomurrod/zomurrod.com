@@ -64,3 +64,18 @@ button:focus {
   transform: translateY(1rem) scale(0.95);
   transition: all 0.2s ease-in;
 } 
+
+#alpha-filter button{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)),
+  linear-gradient(0deg, #FFFFFF, #FFFFFF);  
+  width: 45px;
+  min-width: 45px;
+  height: 30px;
+  box-shadow: 0px 0px 4px 0px #00000008 inset;
+  outline: 0.5px solid #00000005;
+  border-radius: 6px;
+  padding:0px 11px 0px 11px !important;
+  font-size: 12px;
+  color: #52525B;
+  transition: all 0.3s ease;  
+}

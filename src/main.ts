@@ -29,7 +29,20 @@ document.getElementById('search')?.addEventListener('input', function(e) {
     
     resultsContainer.classList.remove('hidden');
   }
+  if(input !== ''){
+    document.getElementById('input-clear')?.classList.remove('hidden');
+
+  }else{
+    document.getElementById('input-clear')?.classList.add('hidden');
+  
+  }
 });
+document.getElementById('input-clear')?.addEventListener('click', function() {
+  document.getElementById('search').value='';
+  document.getElementById('input-clear')?.classList.add('hidden');
+  document.getElementById('autocomplete-results')?.classList.add('hidden');
+
+})
 const apha = ['ا', 'ب', 'ت', 'ث', 'ج','ح','خ',
 'د','ذ','ر','ز','س','ش','ص','ض'];
 
@@ -50,7 +63,8 @@ apha.forEach(function(item, index) {
   // Create a new list item
   var liElement = document.createElement('button');
   liElement.textContent = item;
-  liElement.classList.add('block','min-w-[45px]','w-[45px]','rounded-[10px]','shadow-1sm','h-[30px]','px-1','py-1','text-[12px]','text-zinc-600' ,'bg-white','alpha-btn');
+  // liElement.classList.add('block','min-w-[45px]','w-[45px]','rounded-[10px]','shadow-1sm','h-[30px]','px-1','py-1','text-[12px]','text-zinc-600' ,'bg-white','alpha-btn','border','border-[0.5]','border-black/5');
+  liElement.classList.add( 'alpha-btn');
 
   liElement.addEventListener('click', function($event) {
     filterByAlpha($event)
