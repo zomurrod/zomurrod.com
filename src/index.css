@@ -76,8 +76,7 @@ button:focus {
 }
 
 #alpha-filter button {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)),
-  linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  background:#fff;
   width: 45px;
   min-width: 45px;
   height: 30px;
