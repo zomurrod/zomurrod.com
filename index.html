@@ -64,7 +64,7 @@
         <div class="w-full mt-2 bg-white/[.25] p-[10px] rounded-[20px] " style="backdrop-filter: blur(2px);">
           <div class="relative">
             <input type="text" name="search" id="search"
-              class="block w-full rounded-[10px] bg-white  drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline-offset-0 outline outline-black/5 shadow-1sm  h-[48px]   px-12 text-gray-900  placeholder:text-gray-400  focus:outline-1  focus:outline-offset-0    focus:outline focus:outline-primary"
+              class="block w-full rounded-[10px] bg-white  drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline-offset-0 outline outline-black/5 shadow-1sm  min-h-[48px]   px-12 text-gray-900  placeholder:text-gray-400  focus:outline-1  focus:outline-offset-0    focus:outline focus:outline-primary"
               placeholder="أدخل كلمة او جملة للبحث...">
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4">
               <span class="text-gray-500 sm:text-sm">
@@ -205,7 +205,7 @@
             <div class="bg-white  flex flex-col gap-[24px]  p-[32px] ">
 
               <div class="flex justify-between items-center">
-                <span class="inline-flex items-center rounded-full bg-primary-light px-4 py-2   text-[14px] font-medium text-zinc-600    shadow-2sm  
+                <span class="inline-flex items-center rounded-full bg-primary-light px-4 py-2   text-[14px]  text-zinc-600    shadow-2sm  
                 leading-[17px]">
                   اقترح كلمة او معنى جديد
                 </span>
@@ -222,7 +222,10 @@
                 <div class="relative">
                   <label class="text-sm text-zinc-700 ">الكلمة او الجملة</label>
                   <input type="text" name="word" id="word"
-                  class="block w-full rounded-[10px] bg-white  drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline-offset-0 outline outline-black/5 shadow-1sm  h-[48px]   px-4 text-gray-900  focus:outline-1  focus:outline-offset-0    focus:outline focus:outline-primary mt-2">
+                  style="  
+                  font-size: 16px;
+                  line-height: 1.5;"
+                  class="block w-full rounded-[10px] bg-white  drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline-offset-0 outline outline-black/5 shadow-1sm  min-h-[48px]   px-4 text-gray-900  focus:outline-1  focus:outline-offset-0    focus:outline focus:outline-primary mt-2">
                 
                   <!-- <span class="text-zinc-400 text-[12px]  ">يجب أن يتضمن الحقل 20 حرف على الأقل</span> -->
 
@@ -231,8 +234,8 @@
               <div>
                 <label class="text-sm text-zinc-700 ">المعنى</label>
                 <textarea rows="5" name="meaning" id="meaning"
-                  class="block w-full rounded-[10px] bg-white  drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline-offset-0 outline outline-black/5 shadow-1sm     px-4 py-3 text-gray-900  focus:outline-1  focus:outline-offset-0    focus:outline focus:outline-primary resize:none    mt-2"></textarea>
-                <span class="text-zinc-400 text-[12px]  ">يجب أن يتضمن الحقل 20 حرف على الأقل</span>
+                  class="block w-full rounded-[10px] bg-white  drop-shadow-[0_2px_4px_rgba(0,0,0,0.05)] outline-1 outline-offset-0 outline outline-black/5 shadow-1sm     px-4 py-3 text-gray-900  focus:outline-1  focus:outline-offset-0    focus:outline focus:outline-primary resize:none    my-2"></textarea>
+                <span class="text-zinc-400 text-[12px]  leading-[20px] ">يجب أن يتضمن الحقل 20 حرف على الأقل</span>
 
 
               </div>
